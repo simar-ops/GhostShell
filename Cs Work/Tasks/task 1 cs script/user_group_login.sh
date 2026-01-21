@@ -1,5 +1,6 @@
  #!/bin/bash
 
+#User, Group and Login Management Script
 # Name       : Simarpreet Singh
 # Email      : simar27889@gmail.com
 # Course     : Cloud and Devops Engineer
