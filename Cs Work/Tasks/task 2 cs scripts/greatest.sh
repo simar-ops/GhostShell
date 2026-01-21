@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Find Greatest number out of 3
 echo "Enter first number:"
 read a
 
