@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# To write a script through which we can check file exists and readable , file exists but no permission and file not found
 echo "Enter file path:"
 read file
 
