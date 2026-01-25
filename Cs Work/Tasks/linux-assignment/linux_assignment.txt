@@ -1,0 +1,571 @@
+
+# Linux Basics Practice Assignment
+# Submitted by : Simarpreet Singh
+# Email        : simar27889@gmail.com
+# Training     : Cloud and DevOps Engineer
+# File Name    : linux_assignment.txt
+# Total Tasks  : 8
+
+
+
+Task 1: Navigation
+
+Command:
+
+pwd
+
+
+Output:
+
+/home/simar
+
+
+Command:
+
+ls /
+
+
+Output:
+
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+
+
+Command:
+
+cd /home/simar
+
+
+Output:
+
+/home/simar
+
+
+Command:
+
+mkdir devops_practice
+
+
+Output:
+
+devops_practice directory created
+
+
+Command:
+
+cd devops_practice
+
+
+Output:
+
+/home/simar/devops_practice
+
+
+Command:
+
+touch file1.txt file2.txt file3.txt
+
+
+Output:
+
+file1.txt  file2.txt  file3.txt
+
+
+
+Task 2: File Operations
+
+Command:
+
+ls
+
+
+Output:
+
+file1.txt  file2.txt  file3.txt
+
+
+Command:
+
+mkdir logs
+
+
+Output:
+
+Logs Folder created
+
+
+Command:
+
+ls
+
+
+Output:
+
+file1.txt file2.txt file3.txt logs
+
+
+Command:
+
+mv file1.txt logs
+
+
+Output:
+
+file1.txt  moved to logs folder 
+
+
+Command:
+
+ls
+
+
+Output:
+
+file2.txt file3.txt logs
+
+
+Command:
+
+mv file2.txt config.txt
+
+
+Output:
+
+file2.txt moved to config.txt
+
+
+Command:
+
+ls
+
+
+Output:
+
+config.txt file3.txt logs
+
+
+Command:
+
+cp file3.txt backup.txt
+
+
+Output:
+
+file3.txt is copied to backup.txt
+
+
+Command:
+
+ls
+
+
+Output:
+
+backup.txt config.txt file3.txt logs
+
+
+Command:
+
+rm -r logs
+
+
+Output:
+
+logs folder removed
+
+
+Command:
+
+ls
+
+
+Output:
+
+backup.txt config.txt file3.txt
+
+
+
+Task 3: File Content Management
+
+Command:
+
+ls
+
+
+Output:
+
+backup.txt config.txt file3.txt
+
+
+Command:
+
+nano config.txt
+
+
+Output:
+
+Nano Text Editor launched
+
+
+Command:
+
+cat config.txt
+
+
+Output:
+
+This is config.txt file in devops_practice_folder.
+This is just a sample text of config.txt file.
+
+
+Command:
+
+head -n 1 config.txt
+
+
+Output:
+
+This is config.txt file in devops_practice_folder.
+
+
+Command:
+
+tail -n 1 config.txt
+
+
+Output:
+
+This is just a sample text of config.txt file.
+
+
+
+Task 4: Permissions
+
+Command:
+
+ls
+
+
+Output:
+
+backup.txt config.txt file3.txt
+
+
+Command:
+
+ls -l
+
+
+Output:
+
+-rw-r--r-- 1 simar simar  0 Jan 24 23:33 backup.txt
+-rw-r--r-- 1 simar simar 98 Jan 24 23:38 config.txt
+-rw-r--r-- 1 simar simar 44 Jan 24 23:23 file3.txt
+
+
+Command:
+
+chmod g-r config.txt
+
+
+Output:
+
+Group read permission removed successfully from config.txt
+
+
+Command:
+
+chmod o-r config.txt
+
+
+Output:
+
+Other users read permission removed successfully from config.txt
+
+
+Command:
+
+ls -l
+
+
+Output:
+
+-rw-r--r-- 1 simar simar  0 Jan 24 23:33 backup.txt
+-rw------- 1 simar simar 98 Jan 24 23:38 config.txt
+-rw-r--r-- 1 simar simar 44 Jan 24 23:23 file3.txt
+
+
+
+Task 5: Search & Find
+
+Command:
+
+ls
+
+
+Output:
+
+backup.txt config.txt file3.txt
+
+
+Command:
+
+grep DevOps file3.txt
+
+
+Output:
+
+DevOps is development and operations in IT.(Devops is successfully searched inside file3.txt)
+
+Command:
+
+cd ..
+
+
+Output:
+
+Got back into the /home/simar directory 
+
+
+Command:
+
+find / -type f -name config.txt 2>/dev/null
+
+
+Output:
+
+/home/simar/devops_practice/config.txt
+
+
+
+Task 6: System Info
+
+Command:
+
+whoami
+
+
+Output:
+
+simar
+
+
+Command:
+
+hostname
+
+
+Output:
+
+laptop
+
+
+Command:
+
+top
+
+
+Output:
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+      1 root      20   0   23556  14332   9724 S   0.0   0.1   0:01.88 systemd  
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd 
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+ 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+      9 root      20   0       0      0      0 I   0.0   0.0   0:00.37 kworker+ 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+ 
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+ 
+     16 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+ 
+     17 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftir+ 
+     18 root      20   0       0      0      0 I   0.0   0.0   0:04.95 rcu_pre+ 
+     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp+ 
+
+
+
+Command:
+
+df
+
+
+Output:
+
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs            1598468     2648   1595820   1% /run
+/dev/nvme0n1p6 400132480 14154520 365579064   4% /
+tmpfs            7992324        0   7992324   0% /dev/shm
+tmpfs               5120       20      5100   1% /run/lock
+efivarfs             192      124        64  66% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    200704    38052    162652  19% /boot/efi
+tmpfs            1598464      164   1598300   1% /run/user/1000
+
+
+Command:
+
+free
+
+
+Output:
+
+               total        used        free      shared  buff/cache   available
+Mem:        15984652     3840332     9232752       96300     2880536    12144320
+Swap:        4194300           0     4194300
+
+
+Task 7: Archive & Compress
+
+Command:
+
+ls
+
+
+Output:
+
+archive_devops_practice  Documents  Pictures  Templates
+Desktop                  Downloads  Public    Videos      
+devops_practice          Music      snap             
+
+
+Command:
+
+tar -cvf devops_practice.tar devops_practice
+
+
+Output:
+
+devops_practice/
+devops_practice/config.txt
+devops_practice/backup.txt
+devops_practice/file3.txt
+
+
+Command:
+
+tar -tvf devops_practice.tar
+
+Output:
+
+drwxr-xr-x simar/simar       0 2026-01-25 00:56 devops_practice/
+-rw------- simar/users      98 2026-01-24 23:38 devops_practice/config.txt
+-rw-r--r-- simar/users       0 2026-01-24 23:33 devops_practice/backup.txt
+-rw-r--r-- simar/users      44 2026-01-25 00:08 devops_practice/file3.txt
+
+
+Command:
+
+gzip devops_practice.tar
+
+
+Output:
+
+archive_devops_practice  devops_practice.tar.gz  Music     snap
+Desktop                  Documents               Pictures  Templates
+devops_practice          Downloads               Public    Videos
+
+
+Command:
+
+tar -xzvf devops_practice.tar.gz -C archive_devops_practice
+
+
+Output:
+
+devops_practice/
+devops_practice/config.txt
+devops_practice/backup.txt
+devops_practice/file3.txt
+
+
+Command:
+
+ls
+
+Output:
+
+archive_devops_practice  devops_practice.tar.gz  Music     snap
+Desktop                  Documents               Pictures  Templates
+devops_practice          Downloads               Public    Videos
+
+
+Command:
+
+cd archive_devops_practice
+
+
+Output:
+
+Changed directory to archive_devops_practice
+
+Command:
+
+ls
+
+
+Output:
+
+devops_practice
+
+
+Command:
+
+ls devops_practice
+
+
+Output:
+
+backup.txt config.txt file3.txt
+
+
+
+Task 8: Networking
+
+Command:
+
+hostname -I
+
+
+Output:
+
+192.168.1.150 2405:201:5015:28e3:2f98:cb40:374f:5fd3 2405:201:5015:28e3:5aff:5d76:8bc6:df8
+
+
+Command:
+
+ping -c 5 google.com
+
+
+Output:
+
+PING google.com (2404:6800:4002:824::200e) 56 data bytes
+64 bytes from del12s07-in-x0e.1e100.net (2404:6800:4002:824::200e): icmp_seq=1 ttl=118 time=18.4 ms
+64 bytes from del12s07-in-x0e.1e100.net (2404:6800:4002:824::200e): icmp_seq=2 ttl=118 time=29.6 ms
+64 bytes from del12s07-in-x0e.1e100.net (2404:6800:4002:824::200e): icmp_seq=3 ttl=118 time=22.3 ms
+64 bytes from del12s07-in-x0e.1e100.net (2404:6800:4002:824::200e): icmp_seq=4 ttl=118 time=20.5 ms
+64 bytes from del12s07-in-x0e.1e100.net (2404:6800:4002:824::200e): icmp_seq=5 ttl=118 time=19.9 ms
+
+--- google.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4007ms
+rtt min/avg/max/mdev = 18.376/22.140/29.584/3.924 ms
+
+
+Command:
+
+nslookup google.com
+
+
+Output:
+
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.251.43.174
+Name:	google.com
+Address: 2404:6800:4002:802::200e
+
+ 
