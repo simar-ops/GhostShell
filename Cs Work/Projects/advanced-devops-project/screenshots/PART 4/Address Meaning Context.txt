@@ -1,0 +1,3 @@
+Address,Meaning,Context in Docker
+127.0.0.1 (localhost),"""Only me.""","If a process inside a container listens on localhost, it will refuse connections from the host. It only talks to itself."
+0.0.0.0,"""All interfaces.""","If a process inside a container listens on 0.0.0.0, it is open to the entire Docker network, allowing the host's port mapping to actually work."
