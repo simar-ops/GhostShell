@@ -1,0 +1,13 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+
+# Environment variables (Sensitive Data)
+.env
+
+# Docker logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
